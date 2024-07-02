@@ -1,0 +1,40 @@
+<h1>Hello {{title}}</h1>
+
+
+<!-- drawback of interpolation : expression assign -->
+<!-- {{a=2+2}} -->
+
+<!-- drawback 2 of interpolation : property -->
+<!-- {{window.location.url}} -->
+
+{{siteUrl}}
+
+<input type="text" [(ngModel)]="title" value="{{title}}">
+
+<!-- Property Binding -->
+<input type="text" [disabled]="test">
+
+<!-- Normal Class -->
+<p class="green">hello</p>
+
+<!-- Class binding -->
+<p [class]="color">Class Binding</p>
+
+<!-- Class binding with condtion -->
+<p [class.danger]="hasError">Email is not valid</p>
+
+<!-- ngClass -->
+<p [classList]="'danger font align'">ngClass Syntax</p>
+
+
+<p style="color: blueviolet;">Style Normal</p>
+<!-- Style Binding -->
+ <p [style.color]="highlight_color">Style Binding</p>
+
+ <p [style.color]="hasError ? 'red':'green'">Your answer is</p>
+
+ <!-- Event binding  -->
+  <button type="submit" (click)="greet()">Greet</button>
+
+
+ 
